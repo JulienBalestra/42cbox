@@ -9,12 +9,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
         python \
         libncurses5-dev && \
      apt-get clean autoclean && \
-     apt-get autoremove -y && \
-     rm -rf \
-        /var/lib/apt \
-        /var/lib/dpkg \
-        /var/lib/cache \
-        /var/lib/log
+     apt-get autoremove -y
 
 COPY shell_hook.sh /root/shell_hook.sh
 
